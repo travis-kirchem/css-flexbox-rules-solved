@@ -12,6 +12,8 @@ body {
 
 .content {
   padding: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
 h2 {
@@ -32,11 +34,55 @@ form {
 .subtext {
   color: #a9a9a9;
   font-weight: unset;
+  margin-top: 5px;
 }
 
 #sign-in,
 #sign-up {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 10px;
+}
+
+#sign-in-form, 
+#sign-up-form {
+  padding: 15px 25px 0 25px;
+}
+
+#sign-in-form > div,
+#sign-up-form > div {
+  padding: 10px 0;
+}
+
+#sign-in-form > hr,
+#sign-up-form > hr {
+  margin: 25px 0 0 0;
+}
+
+
+.form-submit-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.form-group-horizontal-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group-horizontal-control > .form-input-control {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+#state, 
+#city {
+  padding: 5px 0;
 }
 
 a {
@@ -46,12 +92,14 @@ a {
 
 label {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 input {
   width: 100%;
   height: 30px;
   padding: 5px;
+  margin-top: 5px;
 }
 
 input[type="checkbox"],
@@ -74,6 +122,7 @@ input[type="submit"] {
   outline: none;
   clear: left;
   cursor: pointer;
+  margin: 0 25px;
 }
 
 input[type="submit"]:hover {
